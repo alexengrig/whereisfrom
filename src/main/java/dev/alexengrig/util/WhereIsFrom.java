@@ -75,6 +75,10 @@ import java.util.List;
  */
 public final class WhereIsFrom {
 
+    private WhereIsFrom() throws IllegalAccessException {
+        throw new IllegalAccessException("This is an util class!");
+    }
+
     /**
      * Returns {@link StackTraceElement} of a method,
      * that calls a method - in which {@code WhereIsFrom#here} is called:
