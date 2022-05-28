@@ -1,5 +1,9 @@
 # whereisfrom
 
+[![Maven Central](https://img.shields.io/maven-central/v/dev.alexengrig.util/whereisfrom.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.alexengrig.util%22%20AND%20a:%22whereisfrom%22)
+[![Javadocs](https://www.javadoc.io/badge/dev.alexengrig.util/whereisfrom.svg)](https://www.javadoc.io/doc/dev.alexengrig.util/whereisfrom)
+[![GitHub](https://img.shields.io/github/license/alexengrig/whereisfrom?style=flat&&color=informational)](LICENSE)
+
 Util library with [WhereIsFrom](src/main/java/dev/alexengrig/util/WhereIsFrom.java),
 provides methods for getting information about a method invocation as
 [StackTraceElement](https://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html).
