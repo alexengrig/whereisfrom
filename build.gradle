@@ -21,6 +21,8 @@ plugins {
 group 'dev.alexengrig'
 version '1.0-SNAPSHOT'
 
+description 'An util library for getting information about a method invocation'
+
 repositories {
     mavenCentral()
 }
