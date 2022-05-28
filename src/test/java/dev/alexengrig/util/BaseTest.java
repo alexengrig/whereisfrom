@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.alexengrig.fromis;
+package dev.alexengrig.util;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

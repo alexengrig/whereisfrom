@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package dev.alexengrig.fromis;
+package dev.alexengrig.util;
 
 import java.util.List;
 
-public class SubFromIsCaller {
+public class SubCaller {
 
     public static class Sub {
 
@@ -27,7 +27,7 @@ public class SubFromIsCaller {
         }
 
         private static StackTraceElement here0() {
-            return FromIs.here();
+            return WhereIsFrom.here();
         }
 
         public static StackTraceElement upOne() {
@@ -39,7 +39,7 @@ public class SubFromIsCaller {
         }
 
         private static StackTraceElement upOne1() {
-            return FromIs.up(1);
+            return WhereIsFrom.up(1);
         }
 
         public static List<StackTraceElement> hereAll() {
@@ -47,7 +47,7 @@ public class SubFromIsCaller {
         }
 
         private static List<StackTraceElement> hereAll0() {
-            return FromIs.hereAll();
+            return WhereIsFrom.hereAll();
         }
 
         public static List<StackTraceElement> upAllOne() {
@@ -59,7 +59,7 @@ public class SubFromIsCaller {
         }
 
         private static List<StackTraceElement> upAllOne1() {
-            return FromIs.upAll(1);
+            return WhereIsFrom.upAll(1);
         }
     }
 }
