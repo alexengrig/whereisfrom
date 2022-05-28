@@ -4,6 +4,26 @@ Util library with [WhereIsFrom](src/main/java/dev/alexengrig/util/WhereIsFrom.ja
 provides methods for getting information about a method invocation as
 [StackTraceElement](https://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html).
 
+## Install
+
+### Gradle
+
+```groovy
+
+implementation 'dev.alexengrig.util:whereisfrom:1.0'
+```
+
+### Maven
+
+```xml
+
+<dependency>
+    <groupId>dev.alexengrig.util</groupId>
+    <artifactId>whereisfrom</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
 ## Use case
 
 Example of a simple Spring Boot application:
@@ -25,6 +45,7 @@ SpringApplication#run(Class<?> primarySource, String... args)
 in which this method is called.
 
 We can create an util method that can define a [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)
+
 - using `WhereIsFrom#here()`:
 
 ```java
