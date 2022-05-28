@@ -19,7 +19,7 @@ package dev.alexengrig.util;
 import java.util.Arrays;
 import java.util.List;
 
-public class WhereIsFrom {
+public final class WhereIsFrom {
 
     public static StackTraceElement here() {
         Throwable throwable = new Throwable();
