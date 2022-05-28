@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * Util class, provides methods for getting information about a method invocation
  * as {@link StackTraceElement}.
+ * Takes the stack trace from an instance of {@link Throwable} - {@link Throwable#getStackTrace()}.
  *
  * <p>
  * Example of a simple Spring Boot application:
@@ -37,7 +38,7 @@ import java.util.List;
  * <p>
  * Usually we have to pass a {@link Class} to
  * <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html#run-java.lang.Class-java.lang.String...-">
- * SpringApplication#run(Class<?> primarySource, String... args)
+ * SpringApplication#run(Class&lt;?&gt; primarySource, String... args)
  * </a>
  * in which this method is called.
  *
@@ -70,7 +71,6 @@ import java.util.List;
  *
  * @author Grig Alex
  * @version 1.0
- * @implNote Takes the stack trace from an instance of {@link Throwable} - {@link Throwable#getStackTrace()}.
  * @since 1.0
  */
 public final class WhereIsFrom {
@@ -143,9 +143,11 @@ public final class WhereIsFrom {
      * }
      * }</pre>
      *
+     * <p>
+     * Use to skip internal methods.
+     *
      * @param height number of stack elements to skip
      * @return {@link StackTraceElement} of a calling method is up {@code height}
-     * @apiNote Use to skip internal methods.
      * @since 1.0
      */
     public static StackTraceElement up(int height) {
@@ -177,9 +179,11 @@ public final class WhereIsFrom {
      * }
      * }</pre>
      *
+     * <p>
+     * Use to skip internal methods.
+     *
      * @param height number of stack elements to skip
      * @return {@link StackTraceElement}-s of calling methods are up {@code height}
-     * @apiNote Use to skip internal methods.
      * @since 1.0
      */
     public static List<StackTraceElement> upAll(int height) {
