@@ -44,9 +44,8 @@ SpringApplication#run(Class<?> primarySource, String... args)
 </a>
 in which this method is called.
 
-We can create an util method that can define a [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)
-
-- using `WhereIsFrom#here()`:
+We can create an util method that can define
+a [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) - using `WhereIsFrom#here()`:
 
 ```java
 public class AwareSpringApplication {
