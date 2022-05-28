@@ -15,7 +15,10 @@
  */
 
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'io.codearte.nexus-staging' version '0.30.0'
 }
 
 group 'dev.alexengrig'
@@ -34,4 +37,61 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom {
+                name = project.name
+                description = project.description
+                url = 'https://github.com/alexengrig/whereisfrom'
+                licenses {
+                    license {
+                        name = 'Apache License, Version 2.0'
+                        url = 'https://www.apache.org/licenses/LICENSE-2.0'
+                        distribution = 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'alexengrig'
+                        name = 'Grig Alex'
+                        email = 'alexengrigdev@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/alexengrig/whereisfrom.git'
+                    developerConnection = 'scm:git:https://github.com/alexengrig/whereisfrom.git'
+                    url = 'https://github.com/alexengrig/whereisfrom.git'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = version.toString().endsWith('SNAPSHOT')
+                    ? 'https://oss.sonatype.org/content/repositories/snapshots'
+                    : 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+            credentials {
+                username = project.properties['ossrhUsername'].toString()
+                password = project.properties['ossrhPassword'].toString()
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+nexusStaging {
+    serverUrl = 'https://oss.sonatype.org/service/local/'
+    username = project.properties['ossrhUsername'].toString()
+    password = project.properties['ossrhPassword'].toString()
 }
