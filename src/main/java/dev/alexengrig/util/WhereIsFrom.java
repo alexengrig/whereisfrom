@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package dev.alexengrig.fromis;
+package dev.alexengrig.util;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class FromIs {
+public class WhereIsFrom {
 
     public static StackTraceElement here() {
         Throwable throwable = new Throwable();
@@ -34,26 +34,36 @@ public class FromIs {
     }
 
     public static StackTraceElement up(int height) {
-        if (height < 0) throw new IllegalArgumentException("The height must not be less than zero");
+        requirePositiveHeight(height);
         Throwable throwable = new Throwable();
         StackTraceElement[] stackTrace = throwable.getStackTrace();
         return getElement(stackTrace, 2 + height);
     }
 
     public static List<StackTraceElement> upAll(int height) {
-        if (height < 0) throw new IllegalArgumentException("The height must not be less than zero");
+        requirePositiveHeight(height);
         Throwable throwable = new Throwable();
         StackTraceElement[] stackTrace = throwable.getStackTrace();
         return Arrays.asList(getElements(stackTrace, 2 + height));
     }
 
     private static StackTraceElement getElement(StackTraceElement[] stackTrace, int index) {
-        return stackTrace[index >= stackTrace.length ? stackTrace.length - 1 : index];
+        requireNotEmptyStackTrace(stackTrace);
+        return stackTrace[index > stackTrace.length ? stackTrace.length - 1 : index];
     }
 
     private static StackTraceElement[] getElements(StackTraceElement[] stackTrace, int begin) {
+        requireNotEmptyStackTrace(stackTrace);
         StackTraceElement[] target = new StackTraceElement[stackTrace.length - begin];
         System.arraycopy(stackTrace, begin, target, 0, target.length);
         return target;
+    }
+
+    private static void requirePositiveHeight(int height) {
+        if (height < 0) throw new IllegalArgumentException("The height must not be less than zero: " + height);
+    }
+
+    private static void requireNotEmptyStackTrace(StackTraceElement[] stackTrace) {
+        if (stackTrace.length == 0) throw new IllegalStateException("The stack trace must not be empty");
     }
 }
