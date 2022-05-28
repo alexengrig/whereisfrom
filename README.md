@@ -1,7 +1,7 @@
 # whereisfrom
 
-[![Maven Central](https://img.shields.io/maven-central/v/dev.alexengrig.util/whereisfrom.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.alexengrig.util%22%20AND%20a:%22whereisfrom%22)
-[![Javadocs](https://www.javadoc.io/badge/dev.alexengrig.util/whereisfrom.svg)](https://www.javadoc.io/doc/dev.alexengrig.util/whereisfrom)
+[![Maven Central](https://img.shields.io/maven-central/v/dev.alexengrig/whereisfrom.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.alexengrig%22%20AND%20a:%22whereisfrom%22)
+[![Javadocs](https://www.javadoc.io/badge/dev.alexengrig/whereisfrom.svg)](https://www.javadoc.io/doc/dev.alexengrig/whereisfrom)
 [![GitHub](https://img.shields.io/github/license/alexengrig/whereisfrom?style=flat&&color=informational)](LICENSE)
 
 Util library with [WhereIsFrom](src/main/java/dev/alexengrig/util/WhereIsFrom.java),
@@ -14,7 +14,7 @@ provides methods for getting information about a method invocation as
 
 ```groovy
 
-implementation 'dev.alexengrig.util:whereisfrom:1.0'
+implementation 'dev.alexengrig:whereisfrom:1.0'
 ```
 
 ### Maven
@@ -22,7 +22,7 @@ implementation 'dev.alexengrig.util:whereisfrom:1.0'
 ```xml
 
 <dependency>
-    <groupId>dev.alexengrig.util</groupId>
+    <groupId>dev.alexengrig</groupId>
     <artifactId>whereisfrom</artifactId>
     <version>1.0</version>
 </dependency>

@@ -18,7 +18,7 @@ plugins {
     id 'java'
 }
 
-group 'dev.alexengrig.util'
+group 'dev.alexengrig'
 version '1.0-SNAPSHOT'
 
 repositories {
