@@ -14,7 +14,7 @@ provides methods for getting information about a method invocation as
 
 ```groovy
 
-implementation 'dev.alexengrig:whereisfrom:1.0'
+implementation 'dev.alexengrig:whereisfrom:1.1'
 ```
 
 ### Maven
@@ -24,7 +24,7 @@ implementation 'dev.alexengrig:whereisfrom:1.0'
 <dependency>
     <groupId>dev.alexengrig</groupId>
     <artifactId>whereisfrom</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 ```
 
