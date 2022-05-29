@@ -4,7 +4,7 @@
 [![Javadocs](https://www.javadoc.io/badge/dev.alexengrig/whereisfrom.svg)](https://www.javadoc.io/doc/dev.alexengrig/whereisfrom)
 [![GitHub](https://img.shields.io/github/license/alexengrig/whereisfrom?style=flat&&color=informational)](LICENSE)
 
-Util library with [WhereIsFrom](src/main/java/dev/alexengrig/util/WhereIsFrom.java),
+An util library with [WhereIsFrom](src/main/java/dev/alexengrig/util/WhereIsFrom.java),
 provides methods for getting information about a method invocation as
 [StackTraceElement](https://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html).
 

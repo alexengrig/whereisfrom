@@ -15,7 +15,7 @@
  */
 
 /**
- * Util library with {@link dev.alexengrig.util.WhereIsFrom}.
+ * An util library with {@link dev.alexengrig.util.WhereIsFrom}.
  *
  * @author Grig Alex
  * @see dev.alexengrig.util.WhereIsFrom
