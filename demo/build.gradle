@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation files('../build/libs/whereisfrom-1.0-SNAPSHOT.jar')
+    implementation files('../target/whereisfrom-1.1-SNAPSHOT.jar')
 
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
