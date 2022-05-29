@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Util class, provides methods for getting information about a method invocation
+ * An util class, provides methods for getting information about a method invocation
  * as {@link StackTraceElement}.
  * Takes the stack trace from an instance of {@link Throwable} - {@link Throwable#getStackTrace()}.
  *
