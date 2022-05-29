@@ -18,7 +18,7 @@
  * An util library with {@link dev.alexengrig.util.WhereIsFrom}.
  *
  * @author Grig Alex
- * @version 1.0
+ * @version 1.1
  * @see dev.alexengrig.util.WhereIsFrom
  */
 package dev.alexengrig.util;
